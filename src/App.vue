@@ -1,10 +1,9 @@
 <template>
   <div id="app">
-
     <Topbar></Topbar>
-
-    
-
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -27,5 +26,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
+}
+
+.container {
+  padding-top: 100px;
 }
 </style>

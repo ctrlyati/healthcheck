@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Health Check</a>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <router-link to="/" class="navbar-brand">Health Check</router-link>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { store } from '../store/user-store'
+import { store as userStore } from '../store/user-store'
 
 export default {
   name: 'Topbar',
@@ -33,13 +33,16 @@ export default {
   },
   computed: {
     count () {
-      return store.state.count
+      return userStore.state.count
     }
   },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
+.navbar {
+  background-color: $color-primary-dark;
+}
 
 </style>
